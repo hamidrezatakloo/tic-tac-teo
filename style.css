@@ -33,3 +33,7 @@ body{
     flex-direction: column;
     gap: 10px;
 }
+
+.playerName{
+    font-size: 1.5rem;
+}
