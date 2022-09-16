@@ -16,6 +16,7 @@ body{
     width: 50%;
     background-color: white;
     padding: 40px;
+    border-radius: 8px;
 }
 
 .x,.o{
