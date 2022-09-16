@@ -20,3 +20,8 @@ body{
 .x,.o{
     font-size: 10vw;
 }
+
+.choices{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
