@@ -21,6 +21,7 @@ body{
 .x,.o{
     font-size: 10vw;
     text-align: center;
+    border: 2px solid rgba(40,40,40,.2);
 }
 
 .choices{
