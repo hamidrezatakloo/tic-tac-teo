@@ -58,3 +58,8 @@ label{
     background-color: #2ecc71;
     border-radius: 4px;
 }
+
+
+.x:hover,.o:hover{
+    background-color: #c0392b;
+}
