@@ -26,12 +26,14 @@ body{
 .choices{
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    margin: 10px 0;
 }
 
 .nickName{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin: 20px 0;
 }
 
 .playerName{
@@ -47,7 +49,7 @@ label{
     border: none;
     font-family: inherit;
     font-size: 1.5rem;
-    margin: 40px 0;
+    margin: 20px 0;
     background-color: #2ecc71;
     border-radius: 4px;
 }
