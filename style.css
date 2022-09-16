@@ -15,3 +15,7 @@ body{
 .container{
     width: 50%;
 }
+
+.x,.o{
+    font-size: 10vw;
+}
