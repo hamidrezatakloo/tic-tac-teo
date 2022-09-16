@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+
 *{
     box-sizing: border-box;
 }
@@ -23,6 +25,7 @@ body{
     font-size: 10vw;
     text-align: center;
     border: 2px solid rgba(40,40,40,.2);
+    font-family: 'Nosifer', cursive;
 }
 
 .choices{
