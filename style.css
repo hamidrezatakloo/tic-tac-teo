@@ -73,15 +73,19 @@ label{
     display: grid;
     grid-template-rows: repeat(3,1fr);
     grid-template-columns: repeat(3,1fr);
+    aspect-ratio: 4/2;
 }
 
 
 .square:nth-child(-n+6){
     border-bottom: 2px solid blue;
-    padding: 10px;
 }
 
 .square:not(:nth-child(3n)){
     border-right: 2px solid red;
+}
+
+.square{
+    font-size: 3rem;
     padding: 10px;
 }
