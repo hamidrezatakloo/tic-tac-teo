@@ -13,7 +13,11 @@
 })();
 
 
-
+const player =(mark,nickName)=>{
+    const getName =()=>nickName;
+    const getMark =()=>mark;
+    return{getName,getMark}
+}
 const start =(initiate)=>{
     
 }
