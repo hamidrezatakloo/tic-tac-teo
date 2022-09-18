@@ -30,7 +30,7 @@ const createBoard =()=>{
         square.classList.add('square');
         container.appendChild(square);
     }
-    const boardList = [...array(9)];
+    const boardList = [...Array(9)];
     return boardList;
 }
 
@@ -57,7 +57,7 @@ const checkEmpty = (target,boardList)=>{
 }
 
 const updateSquare =(target,player,boardList)=>{
-    target.textContent = player.mark;
+    target.textContent = player.getMark();
     boardList[indexSquare(target)] = player.mark;
 }
 
