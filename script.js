@@ -18,6 +18,11 @@ const player =(mark,nickName)=>{
     const getMark =()=>mark;
     return{getName,getMark}
 }
+
+const createBoard =()=>{
+
+}
+
 const start =(initiate)=>{
     
 }
