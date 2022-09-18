@@ -31,5 +31,5 @@ const createBoard =()=>{
 }
 
 const start =(initiate)=>{
-    
+    createBoard();
 }
