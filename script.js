@@ -23,6 +23,11 @@ const createBoard =()=>{
     const container = document.querySelector('.container');
     container.classList.add('board');
     container.replaceChildren();
+    for(let i=0; i<9; ++i){
+        const square = document.createElement('div');
+        square.classList.add('square');
+        container.appendChild(square);
+    }
 }
 
 const start =(initiate)=>{
