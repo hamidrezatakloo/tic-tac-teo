@@ -66,6 +66,7 @@ const start =(initiate)=>{
     const players =createPlayers(initiate);
     document.addEventListener('click',e=>{
         if (e.target.matches('.square'))
-        console.log(e.target);
+            if (checkEmpty(e.target,boardList))
+                updateSquare(e.target,players.playerOne,boardList);
     })
 }
