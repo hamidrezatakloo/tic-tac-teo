@@ -43,13 +43,13 @@ const createPlayers = (initiate)=>{
     return {playerOne,playerBot};
 }
 
-const indexSquare=()=>{
+const indexSquare=(target)=>{
     return Array.from(target.parentNode.children)
     .indexOf(target);  
 }
 
 const checkEmpty = (target,boardList)=>{
-    const index = indexSquare()
+    const index = indexSquare(target)
     if (boardList[index]==undefined)
         return true;
     else
