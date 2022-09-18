@@ -42,4 +42,8 @@ const createPlayers = (initiate)=>{
 const start =(initiate)=>{
     createBoard();
     const players =createPlayers(initiate);
+    document.addEventListener('click',e=>{
+        if (e.target.matches('.square'))
+        console.log(e.target);
+    })
 }
