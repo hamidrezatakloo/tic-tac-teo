@@ -61,6 +61,17 @@ const updateSquare =(target,player,boardList)=>{
     boardList[indexSquare(target)] = player.mark;
 }
 
+const computerChoice =(boardList)=>{
+    const freeSquares =[];
+    for(const square of boardList){
+        if(square ==undefined)
+            freeSquares.push(boardList.indexOf(square));
+    }
+    const randomIndex = Math.random()*freeSquares.length;
+    randomIndex = Math.floor(randomIndex);
+    return randomIndex;
+}
+
 const start =(initiate)=>{
     const boardList = createBoard();
     const players =createPlayers(initiate);
