@@ -39,7 +39,7 @@ const createPlayers = (initiate)=>{
     return {playerOne,playerBot};
 }
 
-const start =()=>{
+const start =(initiate)=>{
     createBoard();
-    const players =createPlayers();
+    const players =createPlayers(initiate);
 }
