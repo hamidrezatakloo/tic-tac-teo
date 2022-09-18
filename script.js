@@ -30,6 +30,16 @@ const createBoard =()=>{
     }
 }
 
-const start =(initiate)=>{
+const createPlayers = (initiate)=>{
+    playerOne = player(initiate.selectedChoice,initiate.nickName);
+    playerBot = player(
+        initiate.selectedChoice =='X'?'O':'X',
+        'bot'
+    );
+    return {playerOne,playerBot};
+}
+
+const start =()=>{
     createBoard();
+    const players =createPlayers();
 }
