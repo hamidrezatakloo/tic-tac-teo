@@ -72,6 +72,12 @@ const computerChoice =(boardList)=>{
     return randomIndex;
 }
 
+const getSquare = (index)=>{
+    const container = document.querySelector('.container');
+    const square = container.children[index];
+    return square;
+}
+
 const start =(initiate)=>{
     const boardList = createBoard();
     const players =createPlayers(initiate);
