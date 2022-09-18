@@ -28,6 +28,8 @@ const createBoard =()=>{
         square.classList.add('square');
         container.appendChild(square);
     }
+    const boardList = [...array(9)];
+    return boardList;
 }
 
 const createPlayers = (initiate)=>{
@@ -40,7 +42,7 @@ const createPlayers = (initiate)=>{
 }
 
 const start =(initiate)=>{
-    createBoard();
+    const boardList = createBoard();
     const players =createPlayers(initiate);
     document.addEventListener('click',e=>{
         if (e.target.matches('.square'))
