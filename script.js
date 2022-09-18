@@ -56,6 +56,11 @@ const checkEmpty = (target,boardList)=>{
         return false;
 }
 
+const updateSquare =(target,player,boardList)=>{
+    target.textContent = player.mark;
+    boardList[indexSquare(target)] = player.mark;
+}
+
 const start =(initiate)=>{
     const boardList = createBoard();
     const players =createPlayers(initiate);
