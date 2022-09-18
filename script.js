@@ -20,7 +20,8 @@ const player =(mark,nickName)=>{
 }
 
 const createBoard =()=>{
-
+    const container = document.querySelector('.container');
+    container.classList.add('board');
 }
 
 const start =(initiate)=>{
