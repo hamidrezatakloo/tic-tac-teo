@@ -88,4 +88,7 @@ label{
 .square{
     font-size: 3rem;
     padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
