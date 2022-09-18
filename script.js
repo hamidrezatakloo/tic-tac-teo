@@ -19,6 +19,8 @@ const player =(mark,nickName)=>{
     return{getName,getMark}
 }
 
+
+
 const createBoard =()=>{
     const container = document.querySelector('.container');
     container.classList.add('board');
@@ -39,6 +41,14 @@ const createPlayers = (initiate)=>{
         'bot'
     );
     return {playerOne,playerBot};
+}
+
+const checkEmpty = (target,boardList)=>{
+    const index = Array.from(target.parentNode.children).indexOf(target);
+    if (boardList[index]==undefined)
+        return true;
+    else
+        return false;
 }
 
 const start =(initiate)=>{
