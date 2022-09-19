@@ -135,5 +135,10 @@ const start =(initiate)=>{
 
 const end =(winner)=>{
     document.removeEventListener('click',eventFunction);
-    console.log(winner.getName());
+
+    //add header with text of winner
+    const result = document.createElement('h2');
+    result.textContent = winner.getName();
+    const container = document.querySelector('.container');
+    container.insertBefore(result,container.firstChild);
 }
