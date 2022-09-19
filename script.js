@@ -78,6 +78,26 @@ const getSquare = (index)=>{
     return square;
 }
 
+const checkWin = (boardList)=>{
+    for (let i=0; i<boardList.length; ++i)
+        {
+            if(i==0 || i==3 || i==6)
+                if(boardList[i]==boardList[i+1] && boardList[i+1] == boardList[i+2])
+                    return true;
+            if(i==0 || i==1 || i==2)
+                if(boardList[i]==boardList[i+3] && boardList[i+3] ==boardList[i+6])
+                    return true;
+            if(i==0)
+                if(boardList[i]==boardList[i+4] && boardList[i+4] ==boardList[i+8])
+                    return true
+            if(i==2)
+                if(boardList[i]==boardList[i+2] && boardList[i+2] ==boardList[i+6])
+                    return true            
+
+        }
+    return false
+}
+
 const start =(initiate)=>{
     const boardList = createBoard();
     const players =createPlayers(initiate);
