@@ -108,12 +108,18 @@ const handleSquareClick =(e,boardList,players)=>{
     if (e.target.matches('.square'))
         if (checkEmpty(e.target,boardList)){
         updateSquare(e.target,players.playerOne,boardList);
+        if(checkWin(boardList)){
+            return end(players.playerOne);
+        }
         let pcTarget = getSquare(computerChoice(boardList));
         if(pcTarget ==undefined) {
             end('tied');
             return;
         }
         updateSquare(pcTarget,players.playerBot,boardList);
+        if(checkWin(boardList)){
+            return end(players.playerBot);
+        }
         }
 
 }
