@@ -141,4 +141,10 @@ const end =(winner)=>{
     result.textContent = winner.getName();
     const container = document.querySelector('.container');
     container.insertBefore(result,container.firstChild);
+
+    //add button to restart game
+    const restart = document.createElement('button');
+    restart.textContent = 'restart';
+    restart.classList.add('restart');
+    container.appendChild(restart);
 }
