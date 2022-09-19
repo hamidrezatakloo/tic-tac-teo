@@ -104,15 +104,19 @@ const checkTied =(boardList)=>{
     return false
 }
 
+const handleSquareClick =(e,boardList,players)=>{
+    if (e.target.matches('.square'))
+        if (checkEmpty(e.target,boardList)){
+        updateSquare(e.target,players.playerOne,boardList);
+        let pcTarget = getSquare(computerChoice(boardList));
+        if(pcTarget ==undefined) return;
+        updateSquare(pcTarget,players.playerBot,boardList);
+        }
+
+}
+
 const start =(initiate)=>{
     const boardList = createBoard();
     const players =createPlayers(initiate);
-    let pcTarget ;
-    document.addEventListener('click',e=>{
-        if (e.target.matches('.square'))
-            if (checkEmpty(e.target,boardList))
-                updateSquare(e.target,players.playerOne,boardList);
-                pcTarget = getSquare(computerChoice(boardList));
-                updateSquare(pcTarget,players.playerBot,boardList);
-    })
+    document.addEventListener('click',(e)=>{handleSquareClick(e,boardList,players)});
 }
