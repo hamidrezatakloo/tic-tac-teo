@@ -67,7 +67,7 @@ const computerChoice =(boardList)=>{
         if(square ==undefined)
             freeSquares.push(boardList.indexOf(square));
     }
-    const randomIndex = Math.random()*freeSquares.length;
+    let randomIndex = Math.random()*freeSquares.length;
     randomIndex = Math.floor(randomIndex);
     return randomIndex;
 }
