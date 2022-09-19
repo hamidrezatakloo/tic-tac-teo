@@ -109,7 +109,10 @@ const handleSquareClick =(e,boardList,players)=>{
         if (checkEmpty(e.target,boardList)){
         updateSquare(e.target,players.playerOne,boardList);
         let pcTarget = getSquare(computerChoice(boardList));
-        if(pcTarget ==undefined) return;
+        if(pcTarget ==undefined) {
+            end('tied');
+            return;
+        }
         updateSquare(pcTarget,players.playerBot,boardList);
         }
 
