@@ -58,7 +58,7 @@ const checkEmpty = (target,boardList)=>{
 
 const updateSquare =(target,player,boardList)=>{
     target.textContent = player.getMark();
-    boardList[indexSquare(target)] = player.mark;
+    boardList[indexSquare(target)] = player.getMark();
 }
 
 const computerChoice =(boardList)=>{
