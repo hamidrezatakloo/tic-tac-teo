@@ -98,3 +98,11 @@ label{
     margin: 2rem 0;
     text-align: center;
 }
+
+.restart{
+    border: none;
+    padding: 10px 30px;
+    background-color: #FCBA04;
+    font-size: 1.2rem;
+    margin: 2rem 0;
+}
