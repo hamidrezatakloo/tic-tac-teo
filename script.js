@@ -63,9 +63,9 @@ const updateSquare =(target,player,boardList)=>{
 
 const computerChoice =(boardList)=>{
     const freeSquares =[];
-    for(const square of boardList){
-        if(square ==undefined)
-            freeSquares.push(boardList.indexOf(square));
+    for(let i=0; i<9; i++){
+        if(boardList[i] ==undefined)
+            freeSquares.push(i);
     }
     let randomIndex = Math.random()*freeSquares.length;
     randomIndex = Math.floor(randomIndex);
