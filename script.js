@@ -91,7 +91,7 @@ const checkWin = (boardList)=>{
                 if(boardList[i]==boardList[i+4] && boardList[i+4] ==boardList[i+8]&& boardList[i]!=undefined)
                     return true
             if(i==2)
-                if(boardList[i]==boardList[i+2] && boardList[i+2] ==boardList[i+6]&& boardList[i]!=undefined)
+                if(boardList[i]==boardList[i+2] && boardList[i+2] ==boardList[i+4]&& boardList[i]!=undefined)
                     return true            
 
         }
