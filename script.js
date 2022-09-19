@@ -81,9 +81,12 @@ const getSquare = (index)=>{
 const start =(initiate)=>{
     const boardList = createBoard();
     const players =createPlayers(initiate);
+    let pcTarget ;
     document.addEventListener('click',e=>{
         if (e.target.matches('.square'))
             if (checkEmpty(e.target,boardList))
                 updateSquare(e.target,players.playerOne,boardList);
+                pcTarget = getSquare(computerChoice(boardList));
+                updateSquare(pcTarget,players.playerBot,boardList);
     })
 }
