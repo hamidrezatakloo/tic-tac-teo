@@ -138,6 +138,7 @@ const end =(winner)=>{
 
     //add header with text of winner
     const result = document.createElement('h2');
+    result.classList.add('result');
     const container = document.querySelector('.container');
 
     if(winner=='tied')
