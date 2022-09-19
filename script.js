@@ -117,13 +117,15 @@ const handleSquareClick =(e,boardList,players)=>{
         }
 
 }
-
+let eventFunction ;
 const start =(initiate)=>{
     const boardList = createBoard();
     const players =createPlayers(initiate);
-    document.addEventListener('click',(e)=>{handleSquareClick(e,boardList,players)});
+    eventFunction =(e)=>{handleSquareClick(e,boardList,players)};
+    document.addEventListener('click',eventFunction);
 }
 
 const end =(winner)=>{
-    
+    document.removeEventListener('click',eventFunction);
+    console.log(winner.getName());
 }
