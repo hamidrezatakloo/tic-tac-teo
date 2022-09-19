@@ -98,6 +98,12 @@ const checkWin = (boardList)=>{
     return false
 }
 
+const checkTied =(boardList)=>{
+    if(boardList.indexOf(undefined)==-1)
+        return true
+    return false
+}
+
 const start =(initiate)=>{
     const boardList = createBoard();
     const players =createPlayers(initiate);
