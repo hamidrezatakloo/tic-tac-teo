@@ -138,8 +138,13 @@ const end =(winner)=>{
 
     //add header with text of winner
     const result = document.createElement('h2');
-    result.textContent = winner.getName();
     const container = document.querySelector('.container');
+
+    if(winner=='tied')
+    result.textContent =winner;
+    else
+    result.textContent = winner.getName();
+
     container.insertBefore(result,container.firstChild);
 
     //add button to restart game
