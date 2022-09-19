@@ -23,13 +23,15 @@ const player =(mark,nickName)=>{
 
 const createBoard =()=>{
     const container = document.querySelector('.container');
-    container.classList.add('board');
+    const board = document.createElement('div');
+    board.classList.add('board');
     container.replaceChildren();
     for(let i=0; i<9; ++i){
         const square = document.createElement('div');
         square.classList.add('square');
-        container.appendChild(square);
+        board.appendChild(square);
     }
+    container.appendChild(board);
     const boardList = [...Array(9)];
     return boardList;
 }
@@ -73,8 +75,8 @@ const computerChoice =(boardList)=>{
 }
 
 const getSquare = (index)=>{
-    const container = document.querySelector('.container');
-    const square = container.children[index];
+    const board = document.querySelector('.board');
+    const square = board.children[index];
     return square;
 }
 
