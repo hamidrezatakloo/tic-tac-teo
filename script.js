@@ -120,3 +120,7 @@ const start =(initiate)=>{
     const players =createPlayers(initiate);
     document.addEventListener('click',(e)=>{handleSquareClick(e,boardList,players)});
 }
+
+const end =(winner)=>{
+    
+}
