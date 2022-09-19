@@ -92,3 +92,9 @@ label{
     justify-content: center;
     align-items: center;
 }
+
+.result{
+    color: #A50104;
+    margin: 2rem 0;
+    text-align: center;
+}
