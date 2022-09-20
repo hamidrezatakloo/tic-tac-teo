@@ -61,7 +61,7 @@ label{
 }
 
 
-.x:hover,.o:hover{
+.x:hover,.o:hover,.selected{
     background-color: #c0392b;
 }
 

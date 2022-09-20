@@ -2,10 +2,17 @@
     let selectedChoice = 'X';
     let nickName = 'playerOne';
     document.addEventListener('click',e=>{
-        if (e.target.matches('.choices>div'))
+
+        if (e.target.matches('.choices>div')){
             selectedChoice = e.target.textContent;
+            Array.from(e.target.parentNode.children)
+            .forEach(el=>el.classList.remove('selected'));
+            e.target.classList.add('selected');
+            }
+
         if (! e.target.matches('.start'))
             return
+            
         const value =document.querySelector('.playerName').value;
         if (value!='')
             nickName = value
