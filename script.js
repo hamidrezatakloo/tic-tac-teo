@@ -108,21 +108,21 @@ const checkTied =(boardList)=>{
     return false
 }
 
-const handleSquareClick =(e,boardList,players)=>{
+const handleSquareClick =(e,boardList,players,initiate)=>{
     if (e.target.matches('.square'))
         if (checkEmpty(e.target,boardList)){
         updateSquare(e.target,players.playerOne,boardList);
         if(checkWin(boardList)){
-            return end(players.playerOne);
+            return end(players.playerOne,initiate);
         }
         let pcTarget = getSquare(computerChoice(boardList));
         if(pcTarget ==undefined) {
-            end('tied');
+            end('tied',initiate);
             return;
         }
         updateSquare(pcTarget,players.playerBot,boardList);
         if(checkWin(boardList)){
-            return end(players.playerBot);
+            return end(players.playerBot,initiate);
         }
         }
 
@@ -131,11 +131,11 @@ let eventFunction ;
 const start =(initiate)=>{
     const boardList = createBoard();
     const players =createPlayers(initiate);
-    eventFunction =(e)=>{handleSquareClick(e,boardList,players)};
+    eventFunction =(e)=>{handleSquareClick(e,boardList,players,initiate)};
     document.addEventListener('click',eventFunction);
 }
 
-const end =(winner)=>{
+const end =(winner,initiate)=>{
     document.removeEventListener('click',eventFunction);
 
     //add header with text of winner
@@ -155,4 +155,9 @@ const end =(winner)=>{
     restart.textContent = 'restart';
     restart.classList.add('restart');
     container.appendChild(restart);
+    
+    restart.addEventListener('click',e=>{
+        container.replaceChildren();
+        start(initiate);
+    })
 }
