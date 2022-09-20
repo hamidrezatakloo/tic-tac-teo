@@ -1,12 +1,14 @@
 (function(){
-    let selectedChoice = '';
-    let nickName = '';
+    let selectedChoice = 'X';
+    let nickName = 'playerOne';
     document.addEventListener('click',e=>{
         if (e.target.matches('.choices>div'))
             selectedChoice = e.target.textContent;
         if (! e.target.matches('.start'))
             return
-        nickName = document.querySelector('.playerName').value;
+        const value =document.querySelector('.playerName').value;
+        if (value!='')
+            nickName = value
         start({selectedChoice,nickName})
         return;
     })
