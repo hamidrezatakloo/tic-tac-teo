@@ -12,7 +12,7 @@
 
         if (! e.target.matches('.start'))
             return
-            
+
         const value =document.querySelector('.playerName').value;
         if (value!='')
             nickName = value
@@ -153,7 +153,7 @@ const end =(winner,initiate)=>{
     if(winner=='tied')
     result.textContent =winner;
     else
-    result.textContent = winner.getName();
+    result.textContent = winner.getName()+' win';
 
     container.insertBefore(result,container.firstChild);
 
